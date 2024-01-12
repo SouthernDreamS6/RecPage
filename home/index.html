@@ -1,49 +1,77 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="">
 
 <head>
-	 <!-- 设置字符集和视口 -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	 <!-- 页面标题和用于SEO的元数据 -->
-	<title>南梦录播站|SD REC</title>
-	<meta name="description" content="这里是南梦的录播站，给喜欢的主播录制。">
-	<meta name="keywords" content="南梦故间,SouthernDream,南梦录播站">
-	<!-- 外部样式表链接 -->
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	
-	<!-- 51.la数据统计 - 开始 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 浏览器标签上显示的网站标题 -->
+    <title>南梦录播站 | SD REC</title>
+    <!-- 网站介绍 -->
+    <meta name="description" content="这里是南梦录播站，为爱发电免费录制。">
+    <!-- 网站关键字 -->
+    <meta name="keywords" content="南梦故间,SouthernDream,南梦录播站,SD REC">
+    <!-- 浏览器标签上显示的图标 -->
+    <link rel="icon" type="image/ico" href="//sdn.geekzu.org/avatar/4cc893d113dd74ceca73f9863f2c5446/">
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="./static/style.css?v=1.1">
+    <link rel="stylesheet" href="./static/APlayer-1.10.1/dist/APlayer.min.css">
+
+    <!-- 自定义设置 -->
+    <style>
+        body {
+            /*背景图片URL 可使用随机图片API */
+            background-image: url("https://t.mwm.moe/ycy");
+        }
+
+        .photo-bg {
+            /* 卡片左侧图片 */
+            background-image: url("https://t.mwm.moe/moez");
+        }
+    </style>
+    <script>
+        // 音乐设置
+        let meting_music_api = "https://api.mizore.cn/meting/api.php";// meting api
+        let music_server = "netease"; // 音乐服务：网易云 netease 参见 meting api支持的服务
+        let music_type = "playlist"; // 歌曲类型：歌单playlist 单首歌曲 song  专辑 album
+        let music_id = "2076651734"; // 歌单ID或歌曲ID或者专辑ID 20173709 29732992
+        let music_order = "random"; // 音频循环顺序, 顺序播放： 'list', 随机播放：'random'
+        let music_mini = true; // mini模式 吸底模式开启后此选项实效 true / false
+        let music_fixed = true; // 吸底模式
+        let music_volume = 0.7; // 默认音量
+        let music_autoplay = true; // 自动播放
+        let music_loop = "all"; // 音频循环播放, 可选值: 'all', 'one', 'none' ，分别为全部循环，单曲循环，不循环
+        // TODO 一言设置
+    </script>
+    <!-- end 自定义设置 -->
+
+    <!-- 51.la数据统计 - 开始 -->
 	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({id:"KIie014Dr08QSnf2",ck:"KIie014Dr08QSnf2",autoTrack:true,hashMode:true})</script>
-	<!-- 51.la数据统计 - 结束 -->
-	<!-- 百度数据统计 - 开始 -->
-	<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?6e87b1df32a8416c35f0eb8062a3392a";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-	<!-- 百度数据统计 - 结束 -->
-	
-	
+    <script>LA.init({id:"KIie014Dr08QSnf2",ck:"KIie014Dr08QSnf2",autoTrack:true,hashMode:true})</script>
+        <!-- 51.la数据统计 - 结束 -->
+        <!-- 百度数据统计 - 开始 -->
+        <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6e87b1df32a8416c35f0eb8062a3392a";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+        <!-- 百度数据统计 - 结束 -->
 </head>
 
 <body>
-	<!-- 主容器 -->
-	<div id="main" class="container">
-		<!-- 带有照片背景的卡片行 -->
-		<div class="row my-card justify-content-center">
-			<!-- 照片图片 -->
-			<div class="col-lg-4 photo-bg"></div>
-			<!-- 主卡片列 -->
-			<div class="col-lg-8 card">
-				<!-- 标题和介绍性文本 -->
-				<h1>Hi，这里是南梦录播站！</h1>
-				<p>我们的站点正在施工中，目前相对简陋，但未来会进行更美化的设计。</p>
+    <div id="main" class="container">
+        <div class="row my-card justify-content-center">
+            <div class="col-lg-4 photo-bg"></div>
+            <div class="col-lg-8 card">
+                <!-- 大标题 -->
+                <h1>Hi，这里是南梦录播站！</h1>
+                <!-- 标题下的一段话 -->
+                <p>我们的站点正在施工中，目前相对简陋，但未来会进行更美化的设计。</p>
 				
 				<p>
 					搭建录播站的初衷是因为平时较为繁忙，难以抽出时间观看直播，因此录制了我关注的一些主播的内容。<br>
@@ -52,56 +80,63 @@ var _hmt = _hmt || [];
 					当然，我们还支持定制服务，您可以为您喜欢的主播定制专属的录播服务。一切都可以高度自定义，甚至您可以选择租用云服务器进行录播。<br>
 					如果有任何问题或建议，欢迎随时联系我！我的联系方式在页面最下方。感谢您的支持！
 				</p>
-				
-				<!-- 用于导航的按钮行 -->
-				<p>点击下方的按钮进入吧</p>
-				<div class="row">
-					<a target="_blank" class="btn btn-secondary col-lg-4" id="onedrive-btn">OneDrive网盘</a>
-					<button id="kaygb-mail" class="btn btn-success col-lg-4">定制录屏请联系</button><br>
-					<a href="https://m3qnhaggct.feishu.cn/docx/QHREd15V1o0Qbkx48NIcb5bUn4e?from=from_copylink" target="_blank" class="btn btn-secondary col-lg-4">申请免费录播</a>
-					
-				</div>
+                <p id="hitokoto_text">:D 一言获取中...</p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- 导航按钮组 -->
+                        <button data-href="https://666090.xyz/link/bililive-onedrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
+                            data-area-w="80%" data-area-h="90%" data-shade="false"
+                            class="kz-nav-btn btn btn-primary col-lg-4">OneDrive网盘录播文件（2024.01.07之前）</button>
 
-				<script>
-  document.querySelector("#onedrive-btn").addEventListener("click", function() {
-    var links = [
-      { url: "https://666090.xyz/link/bililive-onedrive.html", text: "录播文件（2024.01.07之前）" },
-      { url: "https://666090.xyz/link/bililive2-onedrive.html", text: "录播文件（2024.01.07之后）" },
-      { url: "#", text: "等待施工" }
-    ];
+                        <button data-href="https://666090.xyz/link/bililive2-onedrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
+                            data-area-w="80%" data-area-h="90%" data-shade="false"
+                            class="kz-nav-btn btn btn-primary col-lg-4">OneDrive网盘录播文件（2024.01.07之后）</button>
 
-    var popup = window.open("", "popup", "width=400,height=400");
+                        <button data-href="https://m3qnhaggct.feishu.cn/docx/QHREd15V1o0Qbkx48NIcb5bUn4e?from=from_copylink" data-title="申请免费录播" data-window="pop"
+                            data-anim="4" data-area-w="80%" data-area-h="90%" data-shade="false"
+                            class="kz-nav-btn btn btn-secondary col-lg-4">申请免费录播</button>
 
-    links.forEach(function(link) {
-      var a = document.createElement("a");
-      a.href = link.url;
-      a.textContent = link.text;
-      popup.document.body.appendChild(a);
-    });
-  });
-</script>
-				
-				<p>更新日志：<br>
-				2024.01.07添加新的网盘<br>
-				2023.09.04正在测试视频弹幕<br>
-				2023.09.03架设录播站点
-				</p>
+                        <button data-href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=SouthernDream@aurorb.cn"
+                            data-title="Blog" data-window="pop" data-anim="4" data-area-w="80%" data-area-h="90%"
+                            data-shade="false" class="kz-nav-btn btn btn-success col-lg-4">Send a Mail</button>
 
-				<!-- 联系方式标题和文本 -->
-				<h4 class="mt-4">这里是我的联系方式</h4>
-				<p>B站：<a href="https://space.bilibili.com/64154301">南梦故间</a><br>
-				B站录播号：<a href="https://space.bilibili.com/671291814">南梦小铺</a><br>
-				邮箱：SouthernDream@aurorb.cn
-				</p>
+                        <!-- end 导航按钮组 -->
+                    </div>
+                </div>
+                <!-- aplayer inner -->
+                <div id="aplayer-inner" class="aplayer"></div>
+                <!-- end aplayer inner -->
+                <ul class="social mt-1">
+                    <li><a href="https://weibo.com/"><i class="fab fa-weibo " aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://github.com/"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.zhihu.com/"><i class="fab fa-zhihu"
+                                aria-hidden="true"></i></a></li>
+                </ul>
 
-				<!-- 页脚 -->
-				<footer>
-					<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/KIie014Dr08QSnf2/quote.js?theme=0&f=12"></script><br>
-					<p>Copyright 2023 - Now <a href="https://www.aurorb.cn/" target="_blank">南梦故间</a><br>
-					<a href="https://icp.gov.moe/?keyword=20248881" target="_blank">萌ICP备20248881号</a>
-					</p>
-				</footer>
-			</div>
-		</div>
-	</div>
+                <footer>
+                    <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/KIie014Dr08QSnf2/quote.js?theme=0&f=12"></script><br>
+                    <p>Copyright 2023 - Now <a href="https://www.aqrr.cn/" target="_blank">南梦故间</a>
+                        <a href="https://icp.gov.moe/?keyword=20248881" target="_blank">萌ICP备20248881号</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- aplayer -->
+    <div id="aplayer-fixed" class="aplayer"></div>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./static/APlayer-1.10.1/dist/APlayer.min.js"></script>
+    <script src="./static/Meting.min.js"></script>
+    <!-- end_aplayer -->
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script defer src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="./static/layer-v3.5.1/layer/layer.js"></script>
+
+    <script src="./static/main.js"></script>
+
 </html>
