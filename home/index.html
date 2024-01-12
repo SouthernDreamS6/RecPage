@@ -56,8 +56,8 @@ var _hmt = _hmt || [];
 				<!-- 用于导航的按钮行 -->
 				<p>点击下方的按钮进入吧</p>
 				<div class="row">
-					<a href="#" target="_blank" class="btn btn-secondary col-lg-4" id="onedrive-btn">OneDrive网盘</a>
-					<button id="kaygb-mail" class="btn btn-success col-lg-4">定制录屏请联系</button><br>
+					<a target="_blank" class="btn btn-secondary col-lg-4" id="onedrive-btn">OneDrive网盘</a>
+					#<button id="kaygb-mail" class="btn btn-success col-lg-4">定制录屏请联系</button><br>
 					<a href="https://m3qnhaggct.feishu.cn/docx/QHREd15V1o0Qbkx48NIcb5bUn4e?from=from_copylink" target="_blank" class="btn btn-secondary col-lg-4">申请免费录播</a>
 					
 				</div>
@@ -70,14 +70,61 @@ var _hmt = _hmt || [];
       { url: "#", text: "等待施工" }
     ];
 
-    var popup = window.open("", "popup", "width=400,height=400");
+    var modal = document.createElement("div");
+    modal.classList.add("modal", "fade");
+    modal.setAttribute("tabindex", "-1");
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-labelledby", "modal-title");
+    modal.setAttribute("aria-hidden", "true");
+
+    var modalDialog = document.createElement("div");
+    modalDialog.classList.add("modal-dialog");
+    modalDialog.setAttribute("role", "document");
+
+    var modalContent = document.createElement("div");
+    modalContent.classList.add("modal-content");
+
+    var modalHeader = document.createElement("div");
+    modalHeader.classList.add("modal-header");
+
+    var closeButton = document.createElement("button");
+    closeButton.classList.add("close");
+    closeButton.setAttribute("type", "button");
+    closeButton.setAttribute("data-dismiss", "modal");
+    closeButton.setAttribute("aria-label", "Close");
+
+    var closeIcon = document.createElement("span");
+    closeIcon.setAttribute("aria-hidden", "true");
+    closeIcon.innerHTML = "&times;";
+
+    closeButton.appendChild(closeIcon);
+    modalHeader.appendChild(closeButton);
+
+    var modalTitle = document.createElement("h5");
+    modalTitle.classList.add("modal-title");
+    modalTitle.setAttribute("id", "modal-title");
+    modalTitle.textContent = "Links";
+
+    modalHeader.appendChild(modalTitle);
+
+    var modalBody = document.createElement("div");
+    modalBody.classList.add("modal-body");
 
     links.forEach(function(link) {
       var a = document.createElement("a");
       a.href = link.url;
       a.textContent = link.text;
-      popup.document.body.appendChild(a);
+      modalBody.appendChild(a);
     });
+
+    modalContent.appendChild(modalHeader);
+    modalContent.appendChild(modalBody);
+    modalDialog.appendChild(modalContent);
+    modal.appendChild(modalDialog);
+
+    document.body.appendChild(modal);
+
+    $(modal).modal("show");
   });
 </script>
 				
