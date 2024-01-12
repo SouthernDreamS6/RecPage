@@ -56,13 +56,16 @@ var _hmt = _hmt || [];
 				<!-- 用于导航的按钮行 -->
 				<p>点击下方的按钮进入吧</p>
 				<div class="row">
-					<a href="https://666090.xyz/link/bililive-onedrive.html" target="_blank" class="btn btn-secondary col-lg-4">OneDrive网盘</a>
-					<button id="kaygb-mail" class="btn btn-success col-lg-4">定制录屏请联系l</button>
+					<atarget="_blank" class="btn btn-secondary col-lg-4" id="onedrive-btn">OneDrive网盘</a>
+					<button id="kaygb-mail" class="btn btn-success col-lg-4">定制录屏请联系</button><br>
+					<a href="https://m3qnhaggct.feishu.cn/docx/QHREd15V1o0Qbkx48NIcb5bUn4e?from=from_copylink" target="_blank" class="btn btn-secondary col-lg-4">申请免费录播</a>
+					
 				</div>
 				
 				<p>更新日志：<br>
-				2023.9.4正在测试视频弹幕<br>
-				2023.9.3架设录播站点
+				2024.01.07添加新的网盘<br>
+				2023.09.04正在测试视频弹幕<br>
+				2023.09.03架设录播站点
 				</p>
 
 				<!-- 联系方式标题和文本 -->
@@ -74,6 +77,26 @@ var _hmt = _hmt || [];
 
 				<!-- 页脚 -->
 				<footer>
+					<script>document.querySelector("#kaygb-mail").addEventListener("click", function() {
+  // 创建一个弹窗
+  var popup = window.open("", "popup", "width=400,height=400");
+
+  // 添加链接
+  var link1 = document.createElement("a");
+  link1.href = "https://666090.xyz/link/bililive-onedrive.html";
+  link1.textContent = "录播文件（2024.01.07之前）";
+  popup.document.body.appendChild(link1);
+
+  var link2 = document.createElement("a");
+  link2.href = "https://666090.xyz/link/bililive2-onedrive.html";
+  link2.textContent = "录播文件（2024.01.07之后）";
+  popup.document.body.appendChild(link2);
+
+  var link3 = document.createElement("a");
+  link3.href = "#";
+  link3.textContent = "等待施工";
+  popup.document.body.appendChild(link3);
+});</script>
 					<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/KIie014Dr08QSnf2/quote.js?theme=0&f=12"></script><br>
 					<p>Copyright 2023 - Now <a href="https://www.aurorb.cn/" target="_blank">南梦故间</a>
 					</p>
