@@ -64,6 +64,31 @@
 </head>
 
 <body>
+    <!-- 弹窗代码开始 -->
+    <div class="web_notice" onclick="closePopup();">
+        <div class="web_notice_box">
+            <h3 class="web_notice_title">! 公告 !</h3>
+            <div class="web_notice_content">
+                <p class="web_notice_content_1">注：本声明仅用于自保，防止恶意攻击。如果您是一位善解人意的好心人，可以忽略以下内容。</p>
+                <p>另外，商业录制不适用于本公告，请到相关页面查看。</p>
+                <p>当前免费录播服务使用设备配置低带宽低，不支持hls流，因性能问题暂停弹幕上传功能。</p>
+                <p>我们提供的公益性直播录制服务一直都是基于“为爱发电”模式，我们会尽力保障录制质量，但对于因问题导致的任何结果不承担任何责任。</p><br>
+                <p>为什么会发布该声明？因为我一分钱没收，居然有人因为我没发布某场直播来找我索赔？？？</p>
+                <p>对于商业录制出现某些情况我们会根据协议内容进行合理的赔偿。但是！对于免费的！公益性的！无任何盈利性的录播服务我们不通过任何“售后”。</p>
+                <p class="web_notice_content_1">本公告对于“友好用户”无任何恶意，点击任意位置即可关闭公告。</p>
+                <p>希望这可以帮助您更好地了解我们的服务。如果您有任何疑问或建议，请随时联系我们。</p>
+
+                <br><br>
+                <p><a href="###" target="_blank" class="web_notice_link" onclick="redirectUrlToActive();" rel='nofollow'>加一个跳转链接</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function closePopup() {
+            document.querySelector('.web_notice').style.display = 'none';
+        }
+    </script>
+    <!-- 弹窗代码结束 -->
     <div id="main" class="container">
         <div class="row my-card justify-content-center">
             <div class="col-lg-4 photo-bg"></div>
@@ -72,7 +97,6 @@
                 <h1>Hi，这里是南梦录播站！</h1>
                 <!-- 标题下的一段话 -->
                 <p>我们的站点正在施工中，目前相对简陋，但未来会进行更美化的设计。</p>
-				
 				<p>
 					搭建录播站的初衷是因为平时较为繁忙，难以抽出时间观看直播，因此录制了我关注的一些主播的内容。<br>
 					家庭网络目前无法保证完美录制，但在未来，如果资金允许，我们考虑增加更多宽带以提高录制质量。<br>
@@ -80,13 +104,13 @@
 					当然，我们还支持定制服务，您可以为您喜欢的主播定制专属的录播服务。一切都可以高度自定义，甚至您可以选择租用云服务器进行录播。<br>
 					如果有任何问题或建议，欢迎随时联系我！我的联系方式在页面最下方。感谢您的支持！
 				</p>
-                <p id="hitokoto_text">:D 一言获取中...</p>
+                <p id="hitokoto_text">:D 一言获取中...请稍等~</p>
                 <div class="container-fluid">
                     <div class="row">
                         <!-- 导航按钮组 -->
                         <button data-href="https://666090.xyz/link/BiliLive-OneDrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
                             data-area-w="80%" data-area-h="90%" data-shade="false"
-                            class="kz-nav-btn btn btn-primary col-lg-4">OD网盘<br>（2024.01.07之前）</button>
+                            class="kz-nav-btn btn btn-warning col-lg-4">OD网盘<br>（2024.01.07之前）</button>
 
                         <button data-href="https://666090.xyz/link/BiliLive2-OneDrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
                             data-area-w="80%" data-area-h="90%" data-shade="false"
@@ -99,6 +123,10 @@
                         <button data-href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=SouthernDream@aurorb.cn"
                             data-title="Blog" data-window="pop" data-anim="4" data-area-w="80%" data-area-h="90%"
                             data-shade="false" class="kz-nav-btn btn btn-success col-lg-4">Send a Mail</button>
+
+                        <button onclick="document.querySelector('.web_notice').style.display = 'block';"
+                            data-anim="4" data-area-w="80%" data-area-h="90%" data-shade="false"
+                            class="kz-nav-btn btn btn-danger col-lg-4">弹出公告</button>
 
                         <!-- end 导航按钮组 -->
                     </div>
