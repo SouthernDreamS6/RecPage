@@ -65,16 +65,17 @@
 
 <body>
     <!-- 弹窗代码开始 -->
-    <div class="web_notice" onclick="closePopup();">
+    <div class="web_notice" onclick="closePopup('.web_notice');">
         <div class="web_notice_box">
             <h3 class="web_notice_title">! 公告 !</h3>
             <div class="web_notice_content">
                 <p class="web_notice_content_1">注：本声明仅用于自保，防止恶意攻击。如果您是一位善解人意的好心人，可以忽略以下内容。</p>
                 <p>另外，商业录制不适用于本公告，请到相关页面查看。</p>
-                <p>当前免费录播服务使用设备配置低带宽低，不支持hls流，因性能问题暂停弹幕上传功能。</p>
+                <p>当前免费录播服务使用设备配置低带宽低，也没有足够的账号基数提供正常的直播间弹幕上传功能。因性能问题及账号限制问题无限期暂停弹幕上传功能。如需查看直播弹幕请在网盘中寻找弹幕存储文件。</p>
                 <p>我们提供的公益性直播录制服务一直都是基于“为爱发电”模式，我们会尽力保障录制质量，但对于因问题导致的任何结果不承担任何责任。</p><br>
                 <p>为什么会发布该声明？因为我一分钱没收，居然有人因为我没发布某场直播来找我索赔？？？</p>
-                <p>对于商业录制出现某些情况我们会根据协议内容进行合理的赔偿。但是！对于免费的！公益性的！无任何盈利性的录播服务我们不通过任何“售后”。</p>
+				<p>B站录播原视频相关的稿件都是以“转载”的形式投稿的，转载稿件任何流量点赞都不会带来收益。目前为止本人投稿账号未在B站官方产生任何收益。如有疑问请看官方详细规则：<a href="https://www.bilibili.com/read/cv173108/">“bilibili创作激励计划”规则</a></p>
+                <p>对于商业录制出现某些情况我们会根据协议内容进行合理的赔偿。但是！对于免费的！公益性的！无任何盈利性的录播服务我们不提供任何“售后”。</p>
                 <p class="web_notice_content_1">本公告对于“友好用户”无任何恶意，点击任意位置即可关闭公告。</p>
                 <p>希望这可以帮助您更好地了解我们的服务。如果您有任何疑问或建议，请随时联系我们。</p>
 
@@ -83,12 +84,50 @@
             </div>
         </div>
     </div>
-    <script>
-        function closePopup() {
+	<!-- 
+	<script>
+		function closePopup() {
             document.querySelector('.web_notice').style.display = 'none';
         }
     </script>
     <!-- 弹窗代码结束 -->
+	<!-- 弹窗网盘代码开始 -->
+    <div class="web_netdisk" onclick="closePopup('.web_netdisk');">
+        <div class="web_netdisk_box">
+            <h3 class="web_netdisk_title">! 录播文件下载 !</h3>
+            <div class="web_netdisk_content">
+				<button data-href="https://666090.xyz/link/BiliLive-OneDrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
+				data-area-w="80%" data-area-h="90%" data-shade="false"
+				class="kz-nav-btn btn btn-primary col-lg-4">OD网盘<br>（2024.01.07之前）</button>
+
+                <button data-href="https://666090.xyz/link/BiliLive2-OneDrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
+				data-area-w="80%" data-area-h="90%" data-shade="false"
+				class="kz-nav-btn btn btn-warning col-lg-4">OD网盘<br>（2024.01.08-2024.03.07）</button>
+
+                <button data-href="https://666090.xyz/link/BiliLive3-OneDrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
+				data-area-w="80%" data-area-h="90%" data-shade="false"
+				class="kz-nav-btn btn btn-primary col-lg-4">OD网盘<br>（2024.03.08至今）</button>
+                <p class="web_netdisk_content_1">注：受资金成本影响，现仅免费提供OneDrive网盘下载。<br>我们也提供支持定制的方式，请通过主页联系方式与我们商议。<br>（定制下载如更换指定网盘、以实体硬盘邮寄、刻录成DVD或任意能力范围内的方式）</p>
+            </div>
+        </div>
+    </div>
+	<!-- 
+	<script>
+		function closePopup2() {
+            document.querySelector('.web_netdisk').style.display = 'none';
+        }
+    </script>
+    <!-- 弹窗网盘代码结束 -->
+	<script>
+		function closePopup(popupClass) {
+			const popup = document.querySelector(popupClass);
+			if (popup.style.display === 'none') {
+				popup.style.display = 'block'; // 点击展开
+			} else {
+				popup.style.display = 'none'; // 点击关闭
+			}
+		}
+	</script>
     <div id="main" class="container">
         <div class="row my-card justify-content-center">
             <div class="col-lg-4 photo-bg"></div>
@@ -108,13 +147,9 @@
                 <div class="container-fluid">
                     <div class="row">
                         <!-- 导航按钮组 -->
-                        <button data-href="https://666090.xyz/link/BiliLive-OneDrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
-                            data-area-w="80%" data-area-h="90%" data-shade="false"
-                            class="kz-nav-btn btn btn-warning col-lg-4">OD网盘<br>（2024.01.07之前）</button>
-
-                        <button data-href="https://666090.xyz/link/BiliLive2-OneDrive.html" data-title="OneDrive网盘" data-window="newtab" data-anim="4"
-                            data-area-w="80%" data-area-h="90%" data-shade="false"
-                            class="kz-nav-btn btn btn-primary col-lg-4">OD网盘<br>（2024.01.07之后）</button>
+                        <button onclick="document.querySelector('.web_netdisk').style.display = 'block';"
+                            data-anim="4" data-area-w="80%" data-area-h="90%" data-shade="false"
+                            class="kz-nav-btn btn btn-danger col-lg-4">录播文件下载</button>
 
                         <button data-href="https://666090.xyz/link/FeiShu-Free-REC.html" data-title="申请免费录播" data-window="pop"
                             data-anim="4" data-area-w="80%" data-area-h="90%" data-shade="false"
@@ -131,6 +166,7 @@
                         <!-- end 导航按钮组 -->
                     </div>
 					<p>更新日志：<br>
+					2024.03.13合并多个网盘按钮<br>
 					2024.01.12修改主页样式<br>
 					2024.01.07添加新的网盘<br>
 					2023.09.04正在测试视频弹幕<br>

@@ -254,6 +254,8 @@ footer p {
     transform: translate(-50%, -50%);
     border-radius: 40px;
     padding: 50px 40px;
+    max-height: 80%; /* 设置最大高度，适应不同屏幕尺寸 */
+    overflow-y: scroll; /* 添加垂直滚动 */
 }
 
 .web_notice_title {
@@ -285,3 +287,45 @@ footer p {
     width: 80%;
 }
 /* 弹窗代码样式结束 */
+
+/* 弹窗网盘代码样式开始 */
+.web_netdisk {
+    display: none;	/* 初始状态设置为隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99999;
+}
+
+.web_netdisk_box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    background: #FFF;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    padding: 50px 40px;
+    max-height: 80%; /* 设置最大高度，适应不同屏幕尺寸 */
+}
+
+.web_netdisk_title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+}
+
+.web_netdisk_content {
+    font-size: 16px;
+    margin-top: 26px;
+    line-height: 30px;
+    color: #999;
+}
+
+.web_netdisk_content_1 {
+    color: #ff0000;
+}
+/* 弹窗网盘代码样式结束 */
