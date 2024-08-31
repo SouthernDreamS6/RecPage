@@ -88,13 +88,13 @@ strike {
     border-radius: 0;
     margin: 5px 0;
     width: 100%;
-    padding: 12px 40px;
+    padding: 10px 20px;
     transition: ease;
 }
 
 .btn-primary {
     /* box-shadow: 0px 5px 15px 5px rgb(203, 221, 232); */
-    padding: 12px 40px;
+    padding: 10px 20px;
     transition: ease;
 }
 
@@ -104,7 +104,7 @@ strike {
 
 .btn-secondary {
     /* box-shadow: 0px 5px 15px 5px rgb(203, 221, 232); */
-    padding: 12px 40px;
+    padding: 10px 20px;
     transition: ease;
 }
 
@@ -114,7 +114,7 @@ strike {
 
 .btn-success {
     /* box-shadow: 0px 5px 15px 5px rgb(203, 221, 232); */
-    padding: 12px 40px;
+    padding: 10px 20px;
     transition: ease;
 }
 
@@ -304,12 +304,13 @@ footer p {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 80%;
+    width: 90%;
     background: #FFF;
     transform: translate(-50%, -50%);
     border-radius: 40px;
     padding: 50px 40px;
-    max-height: 80%; /* 设置最大高度，适应不同屏幕尺寸 */
+    max-height: 90%; /* 设置最大高度，适应不同屏幕尺寸 */
+    overflow-y: scroll; /* 添加垂直滚动 */
 }
 
 .web_netdisk_title {
@@ -320,8 +321,8 @@ footer p {
 
 .web_netdisk_content {
     font-size: 16px;
-    margin-top: 26px;
-    line-height: 30px;
+    margin-top: 25px;
+    line-height: 20px;
     color: #999;
 }
 
